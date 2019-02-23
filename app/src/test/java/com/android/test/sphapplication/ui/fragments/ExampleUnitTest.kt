@@ -1,4 +1,4 @@
-package com.android.test.sphapplication
+package com.android.test.sphapplication.ui.fragments
 
 import org.junit.Test
 
