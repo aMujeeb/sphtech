@@ -43,11 +43,10 @@ class QuarterConsumptionsFragment : BaseFragment(), IContractQuarterConsumptionV
         super.onViewCreated(view, savedInstanceState)
         LogMessageUtils.getInstance().logMessage("Loading Fragment")
         mQuarterPresenter = ImplQuarterConsumptionPresenter()
-        mQuarterPresenter.setView(this)
+        mQuarterPresenter.setView(this, this.getSupportActivity())
 
         mLstQuarterDetails.layoutManager = LinearLayoutManager(getSupportActivity(), LinearLayoutManager.VERTICAL, false)
         mItemDecorator = DividerItemDecoration(context!!, DividerItemDecoration.VERTICAL)
-        mItemDecorator.setDrawable(ContextCompat.getDrawable(getSupportActivity(), R.drawable.item_divider)!!)
         mLstQuarterDetails.addItemDecoration(mItemDecorator)
         mQuarterDetailsAdapter = QuarterDetailsAdapter(getSupportActivity(), mQuarterPresenter)
         mLstQuarterDetails.adapter = mQuarterDetailsAdapter

@@ -1,5 +1,6 @@
 package com.android.test.sphapplication.ui.fragments.quarter_consumptions
 
+import android.content.Context
 import com.android.test.sphapplication.modals.AnnualUsageRecord
 import com.android.test.sphapplication.modals.UsageRecord
 
@@ -16,11 +17,11 @@ interface IContractQuarterConsumptionView {
     }
 
     interface QuarterConsumptionPresenter {
-        fun setView(view : QuarterConsumptionView)
+        fun setView(view : QuarterConsumptionView,context: Context)
         fun requestQuarterData()
         fun requestQuarterDataByLimit()
         fun onDestroy()
         fun getUsageRecords() : ArrayList<UsageRecord>
-        fun getAnnualUsageRecords() : ArrayList<AnnualUsageRecord>
+        fun getAnnualUsageRecords() : List<AnnualUsageRecord>
      }
 }

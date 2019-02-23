@@ -6,14 +6,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.android.test.sphapplication.R
 import com.android.test.sphapplication.modals.AnnualUsageRecord
-import com.android.test.sphapplication.modals.UsageRecord
 import com.android.test.sphapplication.ui.adapters.view_holders.QuarterDataViewHolder
 import com.android.test.sphapplication.ui.fragments.quarter_consumptions.IContractQuarterConsumptionView
 
 class QuarterDetailsAdapter(var context : Context, var quarterConsumptionPresenter : IContractQuarterConsumptionView.QuarterConsumptionPresenter) : RecyclerView.Adapter<QuarterDataViewHolder>(){
 
-    //private var annualUsageRecords : ArrayList<AnnualUsageRecord> = ArrayList()
-    private var annualUsageRecords : ArrayList<UsageRecord> = ArrayList()
+    private var annualUsageRecords : List<AnnualUsageRecord> = ArrayList()
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): QuarterDataViewHolder {
         return QuarterDataViewHolder(LayoutInflater.from(context).inflate(R.layout.item_quarter, p0, false))
@@ -28,6 +26,6 @@ class QuarterDetailsAdapter(var context : Context, var quarterConsumptionPresent
     }
 
     fun updateItems() {
-        annualUsageRecords = quarterConsumptionPresenter.getUsageRecords()
+        annualUsageRecords = quarterConsumptionPresenter.getAnnualUsageRecords()
     }
 }

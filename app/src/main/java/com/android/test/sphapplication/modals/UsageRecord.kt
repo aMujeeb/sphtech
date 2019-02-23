@@ -5,7 +5,7 @@ import com.android.test.sphapplication.utils.AppConstants
 
 class UsageRecord {
 
-    var volume_of_mobile_data : Double = 0.0
+    var volume_of_mobile_data : String = ""
     var quarter : String =""
     var _id : Int = 0
 

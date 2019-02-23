@@ -3,4 +3,7 @@
     <string name="ok">Ok</string>
 
     <string name="no_records_available">No Records Available</string>
+    <string name="no_network_available">No Network Available</string>
+    <string name="no_network_available_get_from_db">No Network Available. Getting available data from DB.</string>
+    <string name="loading_from_db">Loading from DB</string>
 </resources>
