@@ -1,4 +1,4 @@
-package com.android.test.sphapplication.ui
+package com.android.test.sphapplication.ui.base
 
 import android.os.Bundle
 import android.os.Handler
@@ -41,7 +41,7 @@ class BaseActivity : AppCompatActivity() {
         super.setTitle(titleId)
     }
 
-    public fun replaceFragment(fragment: BaseFragment,tag : String) {
+    public fun replaceFragment(fragment: BaseFragment, tag : String) {
         mSelectedFragment = fragment
         mTitle = title
         var transaction : FragmentTransaction = mFragmentManager.beginTransaction()
@@ -50,7 +50,7 @@ class BaseActivity : AppCompatActivity() {
         transaction.commit()
     }
 
-    public fun pushFragment(fragment: BaseFragment,tag : String) {
+    public fun pushFragment(fragment: BaseFragment, tag : String) {
         mSelectedFragment = fragment
         mTitle = title
         var transaction : FragmentTransaction = mFragmentManager.beginTransaction()
@@ -59,7 +59,7 @@ class BaseActivity : AppCompatActivity() {
         transaction.commit()
     }
 
-    public fun replaceRootFragment(fragment: BaseFragment,tag : String) {
+    public fun replaceRootFragment(fragment: BaseFragment, tag : String) {
         clearFragmentBackStackList()
         mSelectedFragment = fragment
         mTitle = title

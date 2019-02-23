@@ -1,4 +1,4 @@
-package com.android.test.sphapplication.ui
+package com.android.test.sphapplication.ui.base
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
