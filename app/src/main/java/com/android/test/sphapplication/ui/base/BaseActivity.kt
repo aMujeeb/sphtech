@@ -12,7 +12,7 @@ import com.android.test.sphapplication.R
 /**
  * Created by Mujee on 2/22/19 2019 - 02 - 22.
  */
-class BaseActivity : AppCompatActivity() {
+open class BaseActivity : AppCompatActivity() {
 
     protected var           mFragmentManager : FragmentManager = supportFragmentManager;
     private var             mIsBackNavigationEnabled : Boolean = false
